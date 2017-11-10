@@ -15,7 +15,11 @@ public class AcsMessageService {
 	@Autowired
 	private AcsDao dao;
 	
-	public AcsMessage createMessage(AcsMessage message) {
+	public AcsMessage createMessage(AcsMessage message, String keyword) {
+		//take message in AcsMessage, currently not encoded
+		//use keyword to encode it
+		//set it to current message
+		//create message with encoded message
 		return dao.createMessage(message);
 	}
 }
