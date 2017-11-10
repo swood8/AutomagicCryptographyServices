@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Piping Test!
+  </h1>
+</div>
+<div>
+  <input [(ngModel)]="key" placeholder="key"><br>
+  <textarea [(ngModel)]="message" placeholder="Enter message" rows="5" cols="80"></textarea><br>
+  <button (click)="encode(message, key)">Encode!</button>
+  <button (click)="decode(message, key)">Decode!</button><br>
+  <br>
+  <textarea rows="5" cols="80" disabled>{{encoded}}</textarea>
+</div>
