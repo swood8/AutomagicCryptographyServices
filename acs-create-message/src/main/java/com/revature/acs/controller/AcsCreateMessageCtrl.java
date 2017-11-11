@@ -17,7 +17,7 @@ public class AcsCreateMessageCtrl {
 	
 	//should be a POST
 	//a AcsMessage should be passed
-	//everything should be filled
+	//everything should be filled but time_received
 	@GetMapping("/create")
 	public void createMessage(AcsMessage acs) {
 		//TEST
