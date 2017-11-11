@@ -1,3 +1,6 @@
 spring:
   application:
     name: acs-portal
+
+server:
+  port: 0
