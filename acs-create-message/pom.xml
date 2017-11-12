@@ -50,11 +50,11 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/com.github.noraui/ojdbc7 -->
-		<!-- <dependency>
-		    <groupId>com.github.noraui</groupId>
+		<dependency>
+		    <groupId>com.revature</groupId>
 		    <artifactId>ojdbc7</artifactId>
-		    <version>12.1.0.2</version>
-		</dependency> -->
+		    <version>local</version>
+		</dependency>
 				
 		
 	</dependencies>
