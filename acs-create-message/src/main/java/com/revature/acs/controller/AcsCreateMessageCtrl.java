@@ -1,8 +1,8 @@
 package com.revature.acs.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.acs.domain.AcsMessage;
@@ -14,16 +14,11 @@ public class AcsCreateMessageCtrl {
 	@Autowired
 	AcsMessageService service;
 	
-	
 	//should be a POST
 	//a AcsMessage should be passed
 	//everything should be filled but time_received
-	@GetMapping("/create")
-	public void createMessage(AcsMessage acs) {
-		//TEST
-		AcsMessage message = new AcsMessage();
-		message.setMessage("test");
-		service.createMessage(message, "nothing right now");
+	@PostMapping("/create")	
+	public void createMessage(@RequestBody AcsMessage msg) {
+		service.createMessage(msg);
 	}
-	
 }

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class AcsUser {
 	@Id
 	@Column(name="ACSU_ID")
-	private int id;
+	private Integer id;
 	
 	@Column(name="ACSU_FN")
 	private String fn;

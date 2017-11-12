@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class AcsMessage {
 	@Id
 	@Column(name="ACSM_ID")
-	private int id;
+	private Integer id;
 	
 	@OneToOne
 	@JoinColumn(name="ACSM_SENDER")

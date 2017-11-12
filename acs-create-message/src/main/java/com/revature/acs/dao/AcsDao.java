@@ -7,4 +7,5 @@ public interface AcsDao {
 	public AcsMessage createMessage(AcsMessage message);
 	
 	public AcsUser getAcsUserByUsername(AcsUser user);
+	
 }
