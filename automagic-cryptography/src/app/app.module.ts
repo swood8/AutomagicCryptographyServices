@@ -11,6 +11,7 @@ import { VigenerePipe } from './create-message/vigenere.pipe';
 import {InboxComponent} from './inbox/inbox.component';
 import {ModalComponent} from './modal.component';
 import { AppRoutingModule }     from './app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AppRoutingModule }     from './app-routing.module';
     CreateMessageComponent,
     VigenerePipe,
     InboxComponent,
-    ModalComponent
+    ModalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
