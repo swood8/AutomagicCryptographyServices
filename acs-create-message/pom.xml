@@ -51,9 +51,9 @@
 		
 		<!-- https://mvnrepository.com/artifact/com.github.noraui/ojdbc7 -->
 		<dependency>
-		    <groupId>com.revature</groupId>
+		    <groupId>com.github.noraui</groupId>
 		    <artifactId>ojdbc7</artifactId>
-		    <version>local</version>
+		    <version>12.1.0.2</version>
 		</dependency>
 				
 		
