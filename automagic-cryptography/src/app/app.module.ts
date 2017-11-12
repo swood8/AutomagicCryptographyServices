@@ -10,6 +10,7 @@ import { CreateMessageComponent } from './create-message/create-message.componen
 import { VigenerePipe } from './create-message/vigenere.pipe';
 import {InboxComponent} from './inbox/inbox.component';
 import {ModalComponent} from './modal.component';
+import { AppRoutingModule }     from './app-routing.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {ModalComponent} from './modal.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
