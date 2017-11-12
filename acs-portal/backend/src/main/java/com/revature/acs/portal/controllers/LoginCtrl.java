@@ -26,7 +26,7 @@ public class LoginCtrl
 	{
 		return new ModelAndView("login.html");
 	}
-	@GetMapping("/loginCtrl")
+	@PostMapping("/loginCtrl")
 	public AcsUserAndMessages loginAcsUser(String u_name, String p_word)
 	{
 		//This is the DTO which contains both the user information and the messages for that user
