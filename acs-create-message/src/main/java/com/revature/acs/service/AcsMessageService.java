@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.revature.acs.dao.AcsDao;
 import com.revature.acs.domain.AcsMessage;
+import com.revature.acs.domain.AcsUser;
 
 @Component("AcsMessageService")
 @Transactional
@@ -15,11 +16,8 @@ public class AcsMessageService {
 	@Autowired
 	private AcsDao dao;
 	
-	public AcsMessage createMessage(AcsMessage message, String keyword) {
-		//take message in AcsMessage, currently not encoded
-		//use keyword to encode it
-		//set it to current message
-		//create message with encoded message
+	
+	public AcsMessage createMessage(AcsMessage message) {
 		return dao.createMessage(message);
 	}
 }
