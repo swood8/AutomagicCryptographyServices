@@ -18,5 +18,5 @@ public class AcsCreateMessageApplication {
 	@Bean  
 	public SessionFactory sessionFactory(HibernateEntityManagerFactory hemf){  
 	    return hemf.getSessionFactory();  
-	}  
+	}
 }
