@@ -1,3 +1,4 @@
+import { AcsMessage } from './acs-message';
 import { AcsUser } from './acs-user';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -21,7 +22,8 @@ export class AcsService {
 
   checkLogin(): Observable<AcsUser> {
     return this.http.get<AcsUser>(this.zuulUrl + "/login/isLoggedIn").pipe(
-      tap((user: AcsUser) => {if (user) {this.loggedUser.next(user);}})
+      tap((user: AcsUser) => {if (user) {this.loggedUser.next(user);}}),
+      catchError(this.handleError<AcsUser>('checkLogin'))
     );
   }
 
@@ -29,6 +31,12 @@ export class AcsService {
     return this.http.post<AcsUser>(this.zuulUrl + "/login/loginUser", acsu, httpOptions).pipe(
       tap((user: AcsUser) => {if (user) {this.loggedUser.next(user);}}),
       catchError(this.handleError<AcsUser>('submitLogin'))
+    );
+  }
+
+  loadMessages(): Observable<AcsMessage[]> {
+    return this.http.post<AcsMessage[]>(this.zuulUrl + "/inbox/get", this.loggedUser.getValue(), httpOptions).pipe(
+      catchError(this.handleError<AcsMessage[]>('loadMessages'))
     );
   }
 
