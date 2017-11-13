@@ -1,0 +1,45 @@
+<div class="container" style="text-align:center">
+  <h1>
+    User Inbox
+  </h1>
+</div>
+
+<div class="container">
+  <table class="table">
+    <tr>
+      <th></th><th>Sender</th><th>Received on</th><th></th>
+    </tr>
+    <tr *ngFor="let message of messages">
+      <td>
+        <input type="checkbox"/>
+      </td>
+      <td>{{message.sender.firstName}} {{message.sender.lastName}}</td>
+      <td>{{message.sent}}</td>
+      <td><button type="button" (click)="key = ''; modal.show()">View Message</button></td>
+      
+      <app-modal #modal>
+        <div class="app-modal-header">
+          <button type="button" class="close"  (click)="modal.hide()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">
+            Message from {{message.sender.firstName}} {{message.sender.lastName}}
+          </h4>
+        </div>
+        <div class="app-modal-body">
+          <div>
+            <label>Key:</label>
+            <input class="form-control" [(ngModel)]="key" />
+          </div><br>
+          <div>
+            <label>Message:</label>
+            <div class="well well-sm">
+                {{message.message | vigenere:decode:key}}
+            </div>
+          </div>
+        </div>
+        <div class="app-modal-footer">
+          <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+        </div>
+      </app-modal>
+    </tr>
+  </table>
+</div>

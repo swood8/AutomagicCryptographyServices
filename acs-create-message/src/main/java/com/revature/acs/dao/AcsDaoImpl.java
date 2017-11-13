@@ -35,5 +35,4 @@ public class AcsDaoImpl implements AcsDao{
 		return (AcsUser) criteria.add(Restrictions.eq("username", user.getUsername())).uniqueResult();
 	}
 	
-	
 }

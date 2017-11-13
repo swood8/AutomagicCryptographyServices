@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label for="usrn" class="col-sm-2 control-label">Username</label>
+      <div class="col-sm-10">
+          <input id="usrn" type="text" class="form-control" [(ngModel)]="acsu.username">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <div class="col-sm-10">
+        <input id="pswd" type="password" class="form-control" [(ngModel)]="acsu.password">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" (click)="submitLogin(acsu)" class="btn btn-default">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
